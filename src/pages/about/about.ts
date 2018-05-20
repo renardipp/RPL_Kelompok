@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
+
+
 
 @Component({
   selector: 'page-about',
@@ -7,7 +9,11 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  pet: string = "puppies";
+    isAndroid: boolean = false;
+
+  constructor(public navCtrl: NavController, platform: Platform) {
+     this.isAndroid = platform.is('android');
 
   }
 
