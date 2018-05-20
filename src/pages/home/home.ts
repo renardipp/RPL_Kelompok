@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SearchPage } from '../search/search';
+
+
 
 
 @Component({
@@ -12,7 +15,26 @@ export class HomePage {
 
   }
 
+opencabaiPage(){
+
+  this.navCtrl.push(SearchPage);
 
 
+}
+
+opentomatPage(){
+
+  this.navCtrl.push(SearchPage);
+
+
+
+}
+
+openpadiPage(){
+
+
+  this.navCtrl.push(SearchPage);
+
+}
 
 }

@@ -6,10 +6,12 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { FirstPage } from '../pages/first/first';
+import { HasilPage } from '../pages/hasil/hasil';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 import { RegisterPage } from '../pages/register/register';
+import { SearchPage } from '../pages/search/search';
 import { SlidesPage } from '../pages/slides/slides';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -22,10 +24,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     FirstPage,
+    HasilPage,
     HomePage,
     LoginPage,
     ProfilePage,
     RegisterPage,
+    SearchPage,
     SlidesPage,
     TabsPage
   ],
@@ -39,10 +43,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     FirstPage,
+    HasilPage,
     HomePage,
     LoginPage,
     ProfilePage,
     RegisterPage,
+    SearchPage,
     SlidesPage,
     TabsPage
   ],
