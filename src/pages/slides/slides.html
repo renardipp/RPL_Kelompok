@@ -7,20 +7,18 @@
     <ion-slide *ngFor="let slide of slides">
       <ion-toolbar>
         <ion-buttons end>
-          <button ion-button color="primary" (click)="openFirstPage()">Skip</button>
+          <button ion-button color="white" (click)="openFirstPage()">Skip</button>
         </ion-buttons>
       </ion-toolbar>
-      <img [src]="slide.image" class="slide-image"/>
-      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
+      <h2 class="slide-title" ion-text color="white" [innerHTML]="slide.title"></h2>
+      <p  [innerHTML]="slide.description"></p>
     </ion-slide>
     <ion-slide>
       <ion-toolbar>
       </ion-toolbar>
-      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
-      <h2 class="slide-title">Ready to Play?</h2>
-      <button ion-button large clear icon-end color="primary" (click)="openFirstPage()">
-        Continue
+      <h2 ion-text color="white" class="slide-title">Ready to Play?</h2>
+      <button ion-button large clear icon-end color="white" class="button" (click)="openFirstPage()">
+        Ayo Mulai
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
     </ion-slide>

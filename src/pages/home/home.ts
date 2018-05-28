@@ -15,23 +15,7 @@ export class HomePage {
 
   }
 
-opencabaiPage(){
-
-  this.navCtrl.push(SearchPage);
-
-
-}
-
-opentomatPage(){
-
-  this.navCtrl.push(SearchPage);
-
-
-
-}
-
-openpadiPage(){
-
+opensearchPage(){
 
   this.navCtrl.push(SearchPage);
 

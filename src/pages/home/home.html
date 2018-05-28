@@ -1,41 +1,60 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Pak-Tani</ion-title>
+    <ion-title>
+      Home
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="card-background-page">
+<ion-content>
+  <ion-list>
+    <ion-grid>
+    <ion-row>
+    <ion-col col-6>
 
-  <ion-card>
-    <img src="assets/imgs/manfaat-cabe.jpg"/>
-    <div class="card-title">
+      <ion-card (click)="openpencarianPage()">
+      <img src="assets/imgs/padi.png" style='height: 25vw; width: 50vw; display: block; margin: auto;'/>
+        <ion-card-content>
+          <ion-card-title>
+          <font size="4" text-wrap>Padi</font>
+          </ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
 
-   <button ion-button color="light" clear (click)="opencabaiPage()"> Cabai </button>
+    <ion-col col-6>
+      <ion-card (click)="opensearchPage()">
+      <img src="assets/imgs/tomat.jpg" style='height: 25vw; width: 50vw; display: block; margin: auto;'/>
+        <ion-card-content>
+          <ion-card-title>
+          <font size="4" text-wrap>Tomat</font>
+          </ion-card-title>
+        </ion-card-content>
+        </ion-card>
+    </ion-col>
 
-    </div>
+    <ion-col col-6>
+      <ion-card (click)="opensearchPage()">
+      <img src="assets/imgs/cabe.jpg" style='height: 25vw; width: 50vw; display: block; margin: auto;'/>
+        <ion-card-content>
+          <ion-card-title>
+          <font size="4" text-wrap>Cabe</font>
+          </ion-card-title>
+        </ion-card-content>
+        </ion-card>
+    </ion-col>
 
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/tomat.jpg"/>
-    <div class="card-title">
-
-
-      <button ion-button color="light" clear (click)="opentomatPage()"> Tomat </button>
-
-
-    </div>
-
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/padi.jpg"/>
-    <div class="card-title">
-
-        <button ion-button color="light" clear (click)="openpadiPage()"> Padi </button>
-
-    </div>
-
-  </ion-card>
-
+    <ion-col col-6>
+      <ion-card (click)="opensearchPage()">
+      <img src="assets/imgs/jagung.jpg" style='height: 25vw; width: 50vw; display: block; margin: auto;'/>
+        <ion-card-content>
+          <ion-card-title>
+          <font size="4" text-wrap>Jagung</font>
+          </ion-card-title>
+        </ion-card-content>
+        </ion-card>
+    </ion-col>
+    </ion-row>
+    </ion-grid>
+  </ion-list>
 </ion-content>
