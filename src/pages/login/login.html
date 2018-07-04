@@ -12,22 +12,38 @@
 
 </ion-header>
 
-
-<ion-content padding id="login">
-  <ion-list>
-
-    <ion-item class="username">
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text" #username></ion-input>
+<ion-content padding>
+  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input formControlName="email" type="email"
+      [class.invalid]="!loginForm.controls.email.valid">
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid">
+      <p>Tolong masukkan alamat email yang sah.</p>
     </ion-item>
 
-    <ion-item class="username">
+    <ion-item>
       <ion-label floating>Kata Sandi</ion-label>
-      <ion-input type="password" #password></ion-input>
+      <ion-input formControlName="password" type="password"
+      [class.invalid]="!loginForm.controls.password.valid">
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid">
+      <p>Kata sandi harus memiliki enam karakter atau lebih.</p>
     </ion-item>
 
-  </ion-list>
-<div>
-  <button ion-button block  (click)="openHomePage()">Login</button>
-</div>
+    <button ion-button block type="submit" [disabled]="!loginForm.valid">
+      Masuk
+    </button>
+  </form>
+
+  <button ion-button block clear (click)="goToSignup()">
+    Daftar
+  </button>
+
+  <button ion-button block clear (click)="goToResetPassword()">
+    Lupa kata sandi :(
+  </button>
 </ion-content>

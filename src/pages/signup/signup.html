@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input formControlName="email" type="email"
+      [class.invalid]="!signupForm.controls.email.valid">
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signupForm.controls.email.valid">
+      <p>Tolong masukkan alamat email yang sah.</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Kata Sandi</ion-label>
+      <ion-input formControlName="password" type="password"
+      [class.invalid]="!signupForm.controls.password.valid">
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message"
+    *ngIf="!signupForm.controls.password.valid">
+      <p>Kata sandi harus memiliki enam karakter atau lebih</p>
+    </ion-item>
+
+    <button ion-button block type="submit" [disabled]="!signupForm.valid">
+      Daftar
+    </button>
+  </form>
+</ion-content>

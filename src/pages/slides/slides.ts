@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { FirstPage } from '../first/first';
 
 
 
@@ -9,6 +8,7 @@ import { FirstPage } from '../first/first';
   templateUrl: 'slides.html',
 })
 export class SlidesPage {
+  rootPage:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -36,9 +36,9 @@ export class SlidesPage {
   ];
 
 
-  openFirstPage(){
-
-    this.navCtrl.push(FirstPage);
+  openLoginPage(){
+    this.rootPage = 'LoginPage';
+    this.navCtrl.push('LoginPage');
 
   }
 

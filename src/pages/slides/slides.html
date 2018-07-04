@@ -7,7 +7,7 @@
     <ion-slide *ngFor="let slide of slides">
       <ion-toolbar>
         <ion-buttons end>
-          <button ion-button color="white" (click)="openFirstPage()">Skip</button>
+          <button ion-button color="white" (click)="openLoginPage()">Lewati</button>
         </ion-buttons>
       </ion-toolbar>
       <h2 class="slide-title" ion-text color="white" [innerHTML]="slide.title"></h2>
@@ -17,7 +17,7 @@
       <ion-toolbar>
       </ion-toolbar>
       <h2 ion-text color="white" class="slide-title">Ready to Play?</h2>
-      <button ion-button large clear icon-end color="white" class="button" (click)="openFirstPage()">
+      <button ion-button large clear icon-end color="white" class="button" (click)="openLoginPage()">
         Ayo Mulai
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
