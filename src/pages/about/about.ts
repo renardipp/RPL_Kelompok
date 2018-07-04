@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, NavParams, Platform } from 'ionic-angular';
+import { AuthProvider } from "../../providers/auth/auth";
 
 
 
@@ -12,9 +13,14 @@ export class AboutPage {
   pet: string = "puppies";
     isAndroid: boolean = false;
 
-  constructor(public navCtrl: NavController, platform: Platform) {
-     this.isAndroid = platform.is('android');
-
-  }
-
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    public authProvider: AuthProvider) {
+    }
+  
+    logOut(): void {
+      this.authProvider.logoutUser().then(() => {
+        this.navCtrl.setRoot("LoginPage");
+      });
+    }
 }

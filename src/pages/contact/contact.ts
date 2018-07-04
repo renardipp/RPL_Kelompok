@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { AuthProvider } from "../../providers/auth/auth";
 
 @Component({
   selector: 'page-contact',
@@ -7,8 +8,14 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    public authProvider: AuthProvider) {
+  }
 
+  logOut(): void {
+    this.authProvider.logoutUser().then(() => {
+      this.navCtrl.setRoot("LoginPage");
+    });
   }
 
 }

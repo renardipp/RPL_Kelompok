@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AuthProvider } from "../../providers/auth/auth";
 
 /**
  * Generated class for the HasilPage page.
@@ -15,7 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HasilPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public authProvider: AuthProvider) {
+  }
+
+  logOut(): void {
+    this.authProvider.logoutUser().then(() => {
+      this.navCtrl.setRoot("LoginPage");
+    });
   }
 
   ionViewDidLoad() {
