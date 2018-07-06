@@ -2,7 +2,7 @@
 
 npm install -g ionic cordova
 
-npm install firebase --save
+npm install angularfire2 firebase --save
 
 ionic cordova plugin add cordova-plugin-camera
 
