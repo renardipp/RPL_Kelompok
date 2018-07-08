@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Pak-Tani
+      Pencarian Petani
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -16,20 +16,15 @@
 
   <ion-list>
     <ion-item>
-      <ion-label>Start Date</ion-label>
+      <ion-label stacked>Start Date</ion-label>
       <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
     </ion-item>
 
 
     <ion-item>
-      <ion-label>Start Time</ion-label>
-      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Ends</ion-label>
-      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
-    </ion-item>
+        <ion-label stacked>Luas Lahan</ion-label>
+        <ion-input [(ngModel)]="luas" type="number" name="Luas"></ion-input>
+      </ion-item>
 
 
     <button ion-button block (click)="openhasilPage()">Cari</button>
